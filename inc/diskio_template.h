@@ -1,15 +1,15 @@
 //-------------------------------------------------------------------------------------------------
 //
-//  File : diskio.h
+//  File : diskio_template.h
 //
 //  Build  Date           Author            Description
 //  -----  -------------  ----------------  -------------------------------------------------------
-//  000    Mar 31,  2014  Alain Royer       Byte array manipulation source file.
+//  000    2019           (C)ChaN           Low level disk interface module include file
+//  000    2023           Alain Royer       Modification for integration in Digini
 //
 //-------------------------------------------------------------------------------------------------
 
-#ifndef __DISKIO_H__
-#define __DISKIO_H__
+#pragma once
 
 #ifdef DISKIO_GLOBAL
     #define DISKIO_EXTERN
@@ -74,7 +74,6 @@ typedef enum __DiskMedia_e
 // Status of Disk Functions
 typedef enum SystemState_e    SystemState_e;
 typedef SystemState_e         DSTATUS;
-// #define SD_OK           STA_OK  TO DO remove this define
 
 // Results of Disk Functions
 typedef enum
@@ -105,4 +104,3 @@ uint32_t            get_fattime             ();
 }
 #endif
 
-#endif // __DISKIO_H__
